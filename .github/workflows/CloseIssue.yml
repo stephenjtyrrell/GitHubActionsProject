@@ -1,0 +1,17 @@
+name: Close Issue
+on:
+  issues:
+    types:
+      - labeled
+jobs:
+  add-comment:
+    if: github.event.label.name == 'closed'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Close Issue
+        run: gh issue close --comment "Auto-closing issue" "1"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
