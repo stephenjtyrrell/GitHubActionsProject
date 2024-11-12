@@ -16,7 +16,7 @@ jobs:
   move-assigned-card:
     runs-on: ubuntu-latest
     steps:
-      - uses: stephenjtyrrell/githubactionsproject@v1.0.0
+      - uses: stephenjtyrrell/githubactionsproject@main
         with:
           project: GitHubActionsProject
           column: In Progress
